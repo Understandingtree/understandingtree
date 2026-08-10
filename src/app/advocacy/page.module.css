@@ -1,0 +1,156 @@
+.heroGrid {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.subTagline {
+  display: block;
+  margin-block: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.headline {
+  font-family: var(--font-serif-subheading);
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  color: var(--forest-green);
+  margin-block: var(--space-sm) var(--space-md);
+}
+
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.philosophyGrid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.philosophyMain {
+  font-family: var(--font-serif-heading);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.threeCol > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.bio {
+  margin-top: 0.75rem;
+}
+
+.readMore {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-family: var(--font-serif-subheading);
+  text-decoration: underline;
+}
+
+.approachList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-block: var(--space-sm) var(--space-md);
+}
+
+.approachList h3 {
+  font-size: 1.05rem;
+}
+
+.supportAreasGrid {
+  align-items: start;
+}
+
+.supportList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-block: var(--space-sm) var(--space-md);
+}
+
+.supportList h3 {
+  font-size: 1.05rem;
+}
+
+.areasCols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-block: var(--space-sm) var(--space-md);
+}
+
+.areasList li {
+  padding-block: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.isIsntBox {
+  background: var(--warm-cream);
+}
+
+.isIsntBox p {
+  margin-top: 0.5rem;
+}
+
+.blogRow {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.articleTag {
+  display: block;
+  font-family: var(--font-serif-subheading);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rustic-brown);
+  margin-bottom: 0.5rem;
+}
+
+.comingSoon {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--olive-green);
+}
+
+.notAloneCard {
+  background: var(--soft-coral);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: flex-start;
+}
+
+.footerBanner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.bannerHeadline {
+  font-family: var(--font-serif-heading);
+  font-style: italic;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .blogRow {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .footerBanner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,0 +1,105 @@
+.heroGrid {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.scriptName {
+  font-style: italic;
+}
+
+.role {
+  font-family: var(--font-serif-subheading);
+  margin-bottom: 0.4rem;
+}
+
+.bodyGrid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.mainCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.storyText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.subheading {
+  margin-top: var(--space-sm);
+}
+
+.teacherBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sideCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.sideCard {
+  background: rgba(164, 124, 79, 0.08);
+}
+
+.sideHeading {
+  font-size: 1.1rem;
+}
+
+.credentialList,
+.guideList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.credentialList h3,
+.guideList h3 {
+  font-size: 1rem;
+}
+
+.credentialList p,
+.guideList p {
+  font-size: 0.92rem;
+}
+
+.mpv {
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.ctaBanner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bodyGrid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .ctaBanner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

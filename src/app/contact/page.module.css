@@ -1,0 +1,27 @@
+.grid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.infoBlock {
+  margin-top: var(--space-lg);
+}
+
+.infoBlock h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.infoBlock p + p {
+  margin-top: 0.6rem;
+}
+
+.formCard {
+  align-self: start;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,123 @@
+.hero {
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+
+.heroGrid {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.heroLogo {
+  max-width: 320px;
+  margin-inline: auto;
+}
+
+.tagline {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  margin-bottom: var(--space-md);
+}
+
+.heroBody {
+  margin-bottom: var(--space-lg);
+}
+
+.branchGrid {
+  align-items: stretch;
+}
+
+.branchCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  text-align: left;
+}
+
+.branchCard h2 {
+  font-size: 1.3rem;
+}
+
+.branchBtn {
+  margin-top: auto;
+  align-self: flex-start;
+  color: var(--forest-green);
+}
+
+.program .branchBtn {
+  background: var(--program-purple);
+  border-color: var(--program-purple);
+}
+
+.advocacy .branchBtn {
+  background: var(--sage-green);
+  border-color: var(--sage-green);
+}
+
+.institute .branchBtn {
+  background: var(--program-blue);
+  border-color: var(--program-blue);
+}
+
+.storyGrid {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.storyText {
+  margin-top: var(--space-sm);
+}
+
+.readMore {
+  display: inline-block;
+  margin-top: var(--space-md);
+  font-family: var(--font-serif-subheading);
+  color: var(--forest-green);
+  text-decoration: underline;
+}
+
+.quoteWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: var(--space-md);
+}
+
+.newsletter {
+  margin-top: var(--space-md);
+}
+
+.audienceSection {
+  border-top: 1px solid var(--border-soft);
+  padding-block: var(--space-xl);
+}
+
+.audience {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.audienceIcon {
+  font-size: 1.8rem;
+}
+
+.audience h3 {
+  font-size: 1rem;
+}
+
+.audience p {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

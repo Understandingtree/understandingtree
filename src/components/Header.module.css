@@ -1,0 +1,131 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--warm-cream);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding-block: 0.9rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.mark {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.brandText {
+  font-family: var(--font-serif-subheading);
+  font-weight: 700;
+  color: var(--forest-green);
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.brandText sup {
+  font-size: 0.6rem;
+}
+
+.nav {
+  display: none;
+}
+
+.nav ul {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav a {
+  text-decoration: none;
+  font-family: var(--font-serif-subheading);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--warm-charcoal);
+  padding-block: 0.35rem;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover {
+  color: var(--forest-green);
+}
+
+.nav a.active {
+  color: var(--forest-green);
+  border-bottom-color: var(--rustic-brown);
+}
+
+a.cta {
+  display: none;
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-small);
+  border: 1px solid var(--border-soft);
+  background: transparent;
+}
+
+.menuIcon {
+  font-size: 1.3rem;
+  color: var(--forest-green);
+}
+
+.mobileNav {
+  border-top: 1px solid var(--border-soft);
+  background: var(--warm-cream);
+}
+
+.mobileNav ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md) 6%;
+}
+
+.mobileNav a {
+  display: block;
+  text-decoration: none;
+  font-family: var(--font-serif-subheading);
+  font-size: 1rem;
+  color: var(--warm-charcoal);
+  padding-block: 0.5rem;
+}
+
+.mobileNav a.active {
+  color: var(--forest-green);
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    display: block;
+  }
+
+  a.cta {
+    display: inline-flex;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+}

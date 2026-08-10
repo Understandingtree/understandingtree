@@ -1,0 +1,99 @@
+.heroText {
+  text-align: center;
+  padding-block: var(--space-md);
+}
+
+.introBlock {
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.adultsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.adultPaths {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-block: var(--space-sm);
+  font-family: var(--font-serif-subheading);
+}
+
+.adultPaths li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.resourceGrid {
+  align-items: stretch;
+}
+
+.resourceCard {
+  background: rgba(255, 247, 230, 0.08);
+  border: 1px solid rgba(247, 217, 154, 0.35);
+  border-radius: var(--radius-medium);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.resourceCard h3 {
+  color: var(--warm-cream);
+}
+
+.resourceCard p {
+  flex: 1;
+}
+
+.ebookBanner {
+  text-align: center;
+  border: 1px dashed var(--gold-line);
+  border-radius: var(--radius-large);
+  padding: var(--space-lg);
+}
+
+.pathwayList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+  margin-block: var(--space-md);
+}
+
+.pathwayList li::before {
+  content: "🌿 ";
+}
+
+.orgSection {
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.keepGrowing {
+  text-align: center;
+}
+
+.keepGrowingButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .pathwayList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
