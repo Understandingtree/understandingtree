@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import PlaceholderArt from "@/components/ui/PlaceholderArt";
 import Divider from "@/components/ui/Divider";
 import styles from "./page.module.css";
 
@@ -58,14 +58,17 @@ const ARTICLES = [
   {
     tag: "Executive Functioning",
     title: "When Motivation Doesn't Look Like Motivation",
+    img: "/images/03_Program_Blog_Executive_Functioning_Lantern_Book.png",
   },
   {
     tag: "Social-Emotional Learning",
     title: "Teaching Empathy in Real and Practical Ways",
+    img: "/images/04_Program_Blog_Empathy_Heart_Stone.png",
   },
   {
     tag: "Classroom Supports",
     title: "Building Classrooms Where Every Learner Belongs",
+    img: "/images/05_Program_Blog_Classroom_Books_Mug.png",
   },
 ];
 
@@ -90,9 +93,13 @@ export default function ProgramPage() {
             </Link>
           </div>
           <div>
-            <PlaceholderArt
-              label="Storybook illustration: The Understanding Tree with woodland companions gathered beneath it (approved artwork to be supplied — unreleased characters not to be named publicly)"
-              ratio="4 / 3"
+            <Image
+              src="/images/02_Program_Tree_with_Character_Silhouettes.png"
+              alt="The Understanding Tree with character silhouettes beneath it"
+              width={720}
+              height={540}
+              priority
+              className={styles.heroImage}
             />
             <p className={`accent-copy ${styles.caption}`}>
               Something is growing under The Understanding Tree… Stay
@@ -195,6 +202,13 @@ export default function ProgramPage() {
           <div className={`grid grid--3 ${styles.articleGrid}`}>
             {ARTICLES.map((a) => (
               <article className="card" key={a.title}>
+                <Image
+                  src={a.img}
+                  alt={a.tag}
+                  width={400}
+                  height={260}
+                  className={styles.articleThumb}
+                />
                 <span className={styles.articleTag}>{a.tag}</span>
                 <h3>{a.title}</h3>
                 <span className={styles.comingSoon}>Blog launching soon</span>

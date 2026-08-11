@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import PlaceholderArt from "@/components/ui/PlaceholderArt";
 import QuoteBlock from "@/components/ui/QuoteBlock";
 import Divider from "@/components/ui/Divider";
 import styles from "./page.module.css";
@@ -48,9 +48,13 @@ export default function InstitutePage() {
     <>
       <section>
         <div className="container">
-          <PlaceholderArt
-            label="Photograph: four adults seated together beneath The Understanding Tree, each wearing a Path emblem (approved artwork to be supplied)"
-            ratio="16 / 7"
+          <Image
+            src="/images/12_Institute_Hero_Adults_Under_Tree.png"
+            alt="Adults gathered beneath The Understanding Tree"
+            width={1200}
+            height={525}
+            priority
+            className={styles.heroImage}
           />
           <div className={styles.heroText}>
             <h1>Institute™</h1>
@@ -118,6 +122,13 @@ export default function InstitutePage() {
 
       <section>
         <div className={`container ${styles.ebookBanner}`}>
+          <Image
+            src="/images/13_Institute_Ebooks_Books_Botanical.png"
+            alt="E-books and botanical elements"
+            width={480}
+            height={320}
+            className={styles.ebookImage}
+          />
           <h3>E-Books — Coming Soon</h3>
           <p>
             Educational e-books and guides are in development to help

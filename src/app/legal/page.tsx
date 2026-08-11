@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PlaceholderArt from "@/components/ui/PlaceholderArt";
+import Image from "next/image";
 import Accordion, { type AccordionSection } from "@/components/ui/Accordion";
 
 export const metadata: Metadata = {
@@ -210,9 +210,13 @@ export default function LegalPage() {
     <>
       <section>
         <div className="container">
-          <PlaceholderArt
-            label="Legal & Transparency hero: lantern, books, warm light, greenery, and a mug (approved artwork to be supplied)"
-            ratio="16 / 6"
+          <Image
+            src="/images/17_Legal_Transparency_Hero_Tree.png"
+            alt="Legal & Transparency hero: lantern, books, and warm botanical light"
+            width={1200}
+            height={450}
+            priority
+            className="legal-hero-img"
           />
           <div style={{ marginTop: "2rem" }}>
             <span className="eyebrow">Legal &amp; Transparency</span>

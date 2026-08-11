@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import PlaceholderArt from "@/components/ui/PlaceholderArt";
 import Divider from "@/components/ui/Divider";
 import QuoteBlock from "@/components/ui/QuoteBlock";
 import styles from "./page.module.css";
@@ -51,9 +51,13 @@ export default function AboutPage() {
             <p className={styles.role}>Founder &amp; Creator, The Understanding Tree™</p>
             <p className="accent-copy">Understanding changes everything.</p>
           </div>
-          <PlaceholderArt
-            label="Portrait of Courtney Pedersen beneath a tree at golden hour (approved photograph to be supplied)"
-            ratio="4 / 3"
+          <Image
+            src="/images/14_About_Courtney_Portrait_Under_Tree.png"
+            alt="Courtney Pedersen, Founder of The Understanding Tree™"
+            width={720}
+            height={540}
+            priority
+            className={styles.portrait}
           />
         </div>
       </section>
@@ -135,6 +139,13 @@ export default function AboutPage() {
             </div>
 
             <div className={`card ${styles.teacherBox}`}>
+              <Image
+                src="/images/15_About_Teacher_Story_Tree_Lantern.png"
+                alt="A tree and lantern representing the teacher story"
+                width={600}
+                height={300}
+                className={styles.teacherImage}
+              />
               <h3>The Teacher I Always Wanted to Be</h3>
               <p>I always wanted to be a teacher.</p>
               <p>
@@ -182,6 +193,13 @@ export default function AboutPage() {
 
       <section className="section-tint">
         <div className={`container reading-width ${styles.mpv}`}>
+          <Image
+            src="/images/16_Mission_Purpose_Vision_Hero_Tree.png"
+            alt="The Understanding Tree — Mission, Purpose, and Vision"
+            width={800}
+            height={400}
+            className={styles.mpvImage}
+          />
           <span className="eyebrow">Mission • Purpose • Vision</span>
           <p className="flag-note">
             [MISSION, PURPOSE &amp; VISION — TO BE PROVIDED] Courtney&apos;s

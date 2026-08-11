@@ -58,6 +58,23 @@
   text-align: center;
 }
 
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-medium);
+  display: block;
+}
+
+.articleThumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-small);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
 .articleGrid {
   align-items: stretch;
 }

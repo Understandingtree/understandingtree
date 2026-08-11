@@ -4,6 +4,29 @@
   align-items: center;
 }
 
+.portrait {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-medium);
+  display: block;
+}
+
+.teacherImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-small);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.mpvImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-medium);
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
 .scriptName {
   font-style: italic;
 }

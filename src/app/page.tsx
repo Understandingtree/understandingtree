@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import PlaceholderArt from "@/components/ui/PlaceholderArt";
 import QuoteBlock from "@/components/ui/QuoteBlock";
 import Divider from "@/components/ui/Divider";
 import NewsletterForm from "@/components/NewsletterForm";
@@ -58,9 +58,12 @@ export default function HomePage() {
     <>
       <section className={styles.hero}>
         <div className={`container ${styles.heroGrid}`}>
-          <PlaceholderArt
-            label="The Understanding Tree master logo (circular tree + crescent moon mark) — awaiting official logo file"
-            ratio="1 / 1"
+          <Image
+            src="/images/01_Master_Logo_The_Understanding_Tree.png"
+            alt="The Understanding Tree™ master logo"
+            width={480}
+            height={480}
+            priority
             className={styles.heroLogo}
           />
           <div>

@@ -487,6 +487,13 @@ textarea:focus-visible,
   opacity: 0.85;
 }
 
+.legal-hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-medium);
+  display: block;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

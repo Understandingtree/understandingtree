@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import PlaceholderArt from "@/components/ui/PlaceholderArt";
 import Divider from "@/components/ui/Divider";
 import styles from "./page.module.css";
 
@@ -43,10 +43,10 @@ const AREAS = [
 ];
 
 const ARTICLES = [
-  { tag: "Parent Advocacy", title: "How to Prepare for an IEP Meeting with Confidence" },
-  { tag: "Know Your Rights", title: "Understanding FAPE: What California Parents Need to Know" },
-  { tag: "IEP & Meetings", title: "5 Questions Every Parent Should Ask at an IEP Meeting" },
-  { tag: "California Updates", title: "California Special Education Law Updates: What Parents Should Know" },
+  { tag: "Parent Advocacy", title: "How to Prepare for an IEP Meeting with Confidence", img: "/images/08_Advocacy_Blog_IEP_Meeting_Desk.png" },
+  { tag: "Know Your Rights", title: "Understanding FAPE: What California Parents Need to Know", img: "/images/09_Advocacy_Blog_FAPE_Scales_Books.png" },
+  { tag: "IEP & Meetings", title: "5 Questions Every Parent Should Ask at an IEP Meeting", img: "/images/10_Advocacy_Blog_IEP_Questions_Notebook.png" },
+  { tag: "California Updates", title: "California Special Education Law Updates: What Parents Should Know", img: "/images/11_Advocacy_Blog_California_Update_Tree.png" },
 ];
 
 export default function AdvocacyPage() {
@@ -80,9 +80,13 @@ export default function AdvocacyPage() {
               </a>
             </div>
           </div>
-          <PlaceholderArt
-            label="Advocacy hero illustration: lantern, books, and a notepad reading 'My Child Matters. My Voice Matters.' (approved artwork to be supplied)"
-            ratio="4 / 3"
+          <Image
+            src="/images/06_Advocacy_Hero_Lantern_Books_IEP_Prep.png"
+            alt="Advocacy hero: lantern, books, and IEP prep notepad"
+            width={720}
+            height={540}
+            priority
+            className={styles.heroImage}
           />
         </div>
       </section>
@@ -108,6 +112,13 @@ export default function AdvocacyPage() {
         <div className={`container grid grid--3 ${styles.threeCol}`}>
           <div>
             <span className="eyebrow">Why I Advocate</span>
+            <Image
+              src="/images/07_Advocacy_Why_I_Advocate_Tree.png"
+              alt="A lantern glowing beside a tree — why I advocate"
+              width={480}
+              height={360}
+              className={styles.advocateImage}
+            />
             <p className={styles.bio}>
               I&apos;ve experienced the IEP process from more than one
               side—as a former IEP student, as a parent advocating for my
@@ -216,6 +227,13 @@ export default function AdvocacyPage() {
             <div className="grid grid--4">
               {ARTICLES.map((a) => (
                 <article className="card" key={a.title}>
+                  <Image
+                    src={a.img}
+                    alt={a.tag}
+                    width={360}
+                    height={220}
+                    className={styles.articleThumb}
+                  />
                   <span className={styles.articleTag}>{a.tag}</span>
                   <h3>{a.title}</h3>
                   <span className={styles.comingSoon}>Blog launching soon</span>

@@ -4,6 +4,31 @@
   align-items: center;
 }
 
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-medium);
+  display: block;
+}
+
+.advocateImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-small);
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.articleThumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-small);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
 .subTagline {
   display: block;
   margin-block: 0.5rem;
